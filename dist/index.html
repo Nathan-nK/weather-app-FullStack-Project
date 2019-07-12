@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<input id='weather-input' placeholder="Name Your City!">
+<button id='weather-start'>Search!</button>
+
+<body>
+      <script id="weather-template" type="text/x-handlebars-template">
+          {{#each array}}
+          <div class='weather-box'>
+            <div class='data-name'>{{name}}</div>
+            <div class='data-temp'>{{temperature}}</div>
+
+            <div class='con-box'>
+            <img src= "{{conditionPic}}" class='icon'>
+            <div class='data-con'>{{condition}}</div>
+            </div>
+
+            <div class='buttonUp'>
+            <div class='data-updated'><strong>Last Updated:</strong> {{updatedAt}}</div>
+            <button class='save'>Save</button>
+            <button class='remove'>Remove</button></div>
+
+        </div>
+          {{/each}}
+        
+      </script>
+
+      <div class="weather-container">
+      </div>
+
+
+<script src='Renderer.js'></script>
+<script src='TempManager.js'></script>
+<script src='main.js'></script>
+
+
+</body>
+
+</html>

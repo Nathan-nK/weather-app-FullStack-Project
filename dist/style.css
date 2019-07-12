@@ -1,0 +1,78 @@
+body{
+    text-align: center
+}
+.weather-contaier{
+    display: grid;
+    grid-template-rows: 1fr;
+    
+}
+
+.weather-box {
+    display: grid; 
+    grid-template-areas: 
+"h c"
+"t c"
+"t c"
+"b b";
+
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+
+
+    width: 200px;
+    height: 200px;
+    background-color: #33A4C6;
+    border-radius: 5px;
+    font-family: Lato;
+    color: white;
+    margin-bottom: 10px;
+}
+.data-name {
+    grid-area: h;
+    font-size: 20px;
+    border: 2px solid #0F0475;
+    border-radius: 6px;
+    padding-top: 15px;
+    background-color:#4D5DF2;
+    
+    
+}
+.data-temp {
+grid-area: t;
+font-weight: bold;
+font-size: 40px;
+margin-bottom: 50px;
+padding-top: 15px;
+}
+
+.data-con {
+ font-weight: bold;
+ font-size: 25px; 
+}
+.icon {
+    width: 120px;
+}
+.data-updated {
+    font-size: 10px;
+}
+
+.con-box {
+    grid-area: c;
+    
+}
+
+.save {
+    font-family: Lato;
+    
+}
+
+.remove {
+    font-family: Lato;
+    
+}
+
+.buttonUp {
+    grid-area: b;
+    background-color: silver;
+    color: black;   
+}
