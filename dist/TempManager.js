@@ -28,7 +28,7 @@ class TempManager {
         let Data = this.cityData
         const city = Data.find(c => c.name = cityName)
         $.post('/city', city)
-        alert('Save Succesfull!')
+        alert('Saved Successfully!')
     }
 
 
@@ -37,7 +37,7 @@ class TempManager {
             method: 'DELETE',
             url: `/city/${cityName}`,
             success: function () {
-                alert('Deleted Succesfully!');
+                alert('Removed Successfully!');
                 location.reload()
             },
         

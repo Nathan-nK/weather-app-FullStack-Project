@@ -1,39 +1,37 @@
 body{
-    text-align: center
+    text-align: center;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 .weather-contaier{
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 2fr;
     
 }
 
 .weather-box {
     display: grid; 
+    display: inline-block;
     grid-template-areas: 
-"h c"
-"t c"
-"t c"
+"h h"
+"t t"
+"c c"
 "b b";
 
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
 
 
-    width: 200px;
-    height: 200px;
-    background-color: #33A4C6;
-    border-radius: 5px;
-    font-family: Lato;
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);    font-family: Lato;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
+    border-radius:5px;
 }
 .data-name {
     grid-area: h;
-    font-size: 20px;
+    font-size: 30px;
     border: 2px solid #0F0475;
-    border-radius: 6px;
-    padding-top: 15px;
-    background-color:#4D5DF2;
+    background-color:#3E16BF;
     
     
 }
@@ -41,16 +39,16 @@ grid-template-rows: repeat(2, 1fr);
 grid-area: t;
 font-weight: bold;
 font-size: 40px;
-margin-bottom: 50px;
+margin-bottom: 20px;
 padding-top: 15px;
 }
 
 .data-con {
  font-weight: bold;
- font-size: 25px; 
+ font-size: 20px; 
 }
 .icon {
-    width: 120px;
+    width: 100px;
 }
 .data-updated {
     font-size: 10px;
@@ -58,7 +56,8 @@ padding-top: 15px;
 
 .con-box {
     grid-area: c;
-    
+    border-radius: 5px;
+
 }
 
 .save {
@@ -73,6 +72,24 @@ padding-top: 15px;
 
 .buttonUp {
     grid-area: b;
-    background-color: silver;
-    color: black;   
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);    color: black;   
+    border-radius: 5px;
+
+}
+
+#weather-input {
+    width: 90%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #5DCBD3;
+    color: white;
+
+ }
+
+#weather-start {
+    height: 35px;
+    border-radius: 15px;
+    background-color: #5DCBD3;
+    color: white;
 }

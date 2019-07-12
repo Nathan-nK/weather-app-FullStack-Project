@@ -9,9 +9,7 @@ async function loadPage(){
 
 async function handleSearch(){
     let cityName = $('#weather-input').val()
-   console.log(manager.cityData)
    await manager.getCityData(cityName)
-   console.log(manager.cityData)
     render.renderData(manager.cityData)
 }
 

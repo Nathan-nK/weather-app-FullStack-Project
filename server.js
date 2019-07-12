@@ -27,8 +27,3 @@ mongoose.connect( 'mongodb://localhost/weatherDB', { useNewUrlParser: true } ).t
 
 
 
-
-// app.get('/weatherData', function(req , res){
-//         request.get(`http://api.apixu.com/v1/current.json?key=${weatherAPI}&q=${req.params.cityName}`, function(err, data){
-//             then.res.send(data)})
-//         })

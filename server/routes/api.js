@@ -15,8 +15,6 @@ router.get('/city/:cityName', function (req, response) {
     request(`http://api.apixu.com/v1/current.json?key=${API_KEY}&q=${req.params.cityName}`, function (err, city) {
 
         let data = JSON.parse(city.body)
-        console.log(data);
-
         response.send(data)
     })
 
@@ -37,15 +35,12 @@ router.get('/cities', function (request, response) {
 router.post('/city', function (req, res) {
     const cityData = req.body
     let newCity = new City(cityData)
-    console.log(newCity)
     newCity.save(() => res.json({ success: true }))
 })
 
 router.delete('/city/:cityName', function (request, response) {
     let nameof = request.params.cityName
-    console.log(nameof);
     City.findOne({name:nameof}).exec(function(err,data) {
-        console.log(data)
         data.remove()
     })
     response.end()
