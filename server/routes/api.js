@@ -11,7 +11,6 @@ const City = require('../model/City')
 // })
 
 router.get('/city/:cityName', function (req, response) {
-    console.log('fml')
     request(`http://api.apixu.com/v1/current.json?key=${API_KEY}&q=${req.params.cityName}`, function (err, city) {
 
         let data = JSON.parse(city.body)

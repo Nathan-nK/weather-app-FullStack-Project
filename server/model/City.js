@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 
 const DBSchema = new Schema( {
     name: String,
-    updatedAt: Date,
+    updatedAt: String,
     temperature: Number,
     condition: String,
     conditionPic: String
