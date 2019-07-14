@@ -26,7 +26,7 @@ class TempManager {
 
     saveCity(cityName) {
         let Data = this.cityData
-        const city = Data.find(c => c.name = cityName)
+        const city = Data.find(c => c.name == cityName)
         $.post('/city', city)
         alert('Saved Successfully!')
     }

@@ -2,51 +2,46 @@ body{
     text-align: center;
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
-.weather-contaier{
-    display: grid;
-    grid-template-rows: 2fr;
-    
-}
-
 .weather-box {
     display: grid; 
-    display: inline-block;
     grid-template-areas: 
 "h h"
-"t t"
-"c c"
+"t c"
 "b b";
 
-grid-template-rows: repeat(3, 1fr);
-
-
-    width: 250px;
-    height: 250px;
-    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);    font-family: Lato;
+    width: 90%;
+    height: 30%;  
+    font-family: Lato;
     color: white;
-    margin-bottom: 80px;
-    margin-left: 5px;
-    border-radius:5px;
+    margin-bottom: 5%;
+    margin-left : 30px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 }
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
 .data-name {
     grid-area: h;
     font-size: 30px;
-    border: 2px solid #0F0475;
-    background-color:#3E16BF;
-    
-    
+    background-color:#3E16BF; 
 }
+
 .data-temp {
 grid-area: t;
+text-align: center;
+vertical-align: middle;
 font-weight: bold;
-font-size: 40px;
-margin-bottom: 20px;
+font-size: 350%;
 padding-top: 15px;
+background-color:#005884;
 }
 
 .data-con {
  font-weight: bold;
- font-size: 20px; 
+ font-size: 180%; 
 }
 .icon {
     width: 100px;
@@ -57,7 +52,7 @@ padding-top: 15px;
 
 .con-box {
     grid-area: c;
-    border-radius: 5px;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
 
 }
 
@@ -112,3 +107,25 @@ padding-top: 15px;
 }
 
 
+
+@keyframes morph{
+    25%{
+      background-color: #e74c3c;
+    }
+    
+    50%{
+      background-color:#27ae60;
+    }
+    
+    75%{
+      background-color: #2980b9;
+    }
+    
+    100%{
+      background-color: #f1c40f;
+      margin-left: 200px;
+    }
+  }
+  
+ 
+  
